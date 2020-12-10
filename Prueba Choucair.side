@@ -1,0 +1,87 @@
+{
+  "id": "9e9629dd-5c6f-4d87-9bfa-97b381b0ce49",
+  "version": "2.0",
+  "name": "Prueba Choucair",
+  "url": "https://s1.demo.opensourcecms.com",
+  "tests": [{
+    "id": "e3925867-9730-40c7-a82f-cdbe6c509b0b",
+    "name": "crear post",
+    "commands": [{
+      "id": "3c9feaaf-9e09-4cd5-955c-ddcdf6ba6481",
+      "comment": "",
+      "command": "open",
+      "target": "/wordpress/wp-admin/nav-menus.php?action=edit&menu=0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "580b0038-0a62-4682-81fc-83bf6a71db59",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "29861790-f5a1-4ed9-87c4-ffee7702f82a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=All Posts",
+      "targets": [
+        ["linkText=All Posts", "linkText"],
+        ["css=#menu-posts .wp-first-item > .wp-first-item", "css:finder"],
+        ["xpath=//a[contains(text(),'All Posts')]", "xpath:link"],
+        ["xpath=//li[@id='menu-posts']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'edit.php')])[2]", "xpath:href"],
+        ["xpath=//li[3]/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'All Posts')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b10bab65-8746-493b-a2ef-742824bd248a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.page-title-action",
+      "targets": [
+        ["css=.page-title-action", "css:finder"],
+        ["xpath=(//a[contains(text(),'Add New')])[6]", "xpath:link"],
+        ["xpath=//div[@id='wpbody-content']/div[5]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://s1.demo.opensourcecms.com/wordpress/wp-admin/post-new.php')])[4]", "xpath:href"],
+        ["xpath=//div[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f8da7ca7-f9b7-43a6-ae39-d9e55fc926d0",
+      "comment": "",
+      "command": "type",
+      "target": "id=post-title-0",
+      "targets": [
+        ["id=post-title-0", "id"],
+        ["css=#post-title-0", "css:finder"],
+        ["xpath=//textarea[@id='post-title-0']", "xpath:attributes"],
+        ["xpath=//div[@id='editor']/div/div/div/div[2]/div[3]/div/div/div/div/div/div/div/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "prueba cristopher"
+    }, {
+      "id": "b093621f-2498-485c-bc37-7dc240214646",
+      "comment": "",
+      "command": "mouseUp",
+      "target": "css=.block-editor-rich-text__editable",
+      "targets": [
+        ["css=.block-editor-rich-text__editable", "css:finder"],
+        ["xpath=//div[@id='block-40f1469b-051a-41fa-86e6-3276be00ca0b']/div[3]/div/div/div/div/div/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "f698bc79-d2fe-481a-ac57-0a64072f0ed1",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e3925867-9730-40c7-a82f-cdbe6c509b0b"]
+  }],
+  "urls": ["https://s1.demo.opensourcecms.com/"],
+  "plugins": []
+}
